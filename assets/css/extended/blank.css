@@ -18,12 +18,12 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 }
 
 body {
-  font-family: "LXGW WenKai Mono GB Screen", "LXGW WenKai Mono GB Screen Bundled", serif, sans-serif, monospace;
+  font-family: "LXGW WenKai Mono GB Screen", serif, sans-serif, monospace;
   font-size: 17px;
 }
 
 code {
-  font-family: "CaskaydiaCove Nerd Font", "CaskaydiaCove Nerd Font Bundled", "LXGW WenKai Mono GB Screen", "LXGW WenKai Mono GB Screen Bundled", monospace;
+  font-family: "CaskaydiaCove Nerd Font", "LXGW WenKai Mono GB Screen", monospace;
 }
 
 .toc {

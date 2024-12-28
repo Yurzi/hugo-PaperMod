@@ -1,7 +1,7 @@
-@font-face {
-  font-family: "LXGW WenKai Mono GB Screen Bundled";
-  src: url("/fonts/lxgw-wenkai/LXGWWenKaiMonoGBScreen.ttf") format("truetype");
-}
+/* @font-face { */
+/*   font-family: "LXGW WenKai Mono GB Screen Bundled"; */
+/*   src: url("/fonts/lxgw-wenkai/LXGWWenKaiMonoGBScreen.ttf") format("truetype"); */
+/* } */
 
 @font-face {
   font-family: "CaskaydiaCove Nerd Font Bundled";
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-SemiLight.ttf") format("truetype");
   font-weight: 350;
   font-style: normal;
@@ -26,42 +26,42 @@
 
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-ExtraLightItalic.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-SemiLightItalic.ttf") format("truetype");
   font-weight: 350;
   font-style: italic;
@@ -69,21 +69,21 @@
 
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-SemiBoldItalic.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "CaskaydiaCove Nerd Font Bundled";
+  font-family: "CaskaydiaCove Nerd Font";
   src: url("/fonts/CaskaydiaCove/CaskaydiaCoveNerdFont-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
