@@ -3,15 +3,14 @@
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- if .Param "math" }}
   {{- $texChtml := resources.Get "js/tex-mml-chtml.min.js" -}}
-  {{- with resources.GetRemote "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" }}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js") }}
     {{ with .Err }}
       {{ errorf "%s" . }}
-      {{ $texChtml = resources.Get "js/tex-mml-chtml.min.js" }}
-    {{ else }}
-      {{ $texChtml = .Content | resources.FromString "js/tex-chtml.min.js" }}
+    {{ else with .Value }}
+      {{ $texChtml = . | js.Build | minify | resources.FromString "js/tex-mml-chtml.min.js" }}
     {{ end }}
   {{- end }}
-  {{- $mathjax := (slice $texChtml) | resources.Concat "assets/js/mathjax.js" | fingerprint -}}
+  {{- $mathjax := (slice $texChtml) | resources.Concat "js/mathjax.js" | fingerprint -}}
   <script
     defer
     crossorigin="anonymous"
@@ -33,14 +32,14 @@
 {{- end }}
 {{- if .Param "mermaid" }}
   {{- $mermaid := resources.Get "js/mermaid.min.js" -}}
-  {{- with resources.GetRemote "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" }}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js") }}
     {{ with .Err }}
       {{ errorf "%s" . }}
-      {{ $mermaid = resources.Get "js/mermaid.min.js" }}
-    {{ else }}
-      {{ $mermaid = .Content | resources.FromString "js/mermaid.min.js" }}
+    {{ else with .Value }}
+      {{ $mermaid = . | resources.FromString "js/mermaid.min.js" }}
     {{ end }}
   {{- end }}
+  {{ $mermaid = $mermaid | fingerprint }}
   <script
     defer
     crossorigin="anonymous"
@@ -49,5 +48,16 @@
     integrity="{{ $mermaid.Data.Integrity }}"
   ></script>
 {{- end }}
+
+{{- $cryptoJS := resources.Get "js/crypto-js.js" -}}
+{{ $cryptoJS = $cryptoJS | fingerprint }}
+<script
+  defer
+  crossorigin="anonymous"
+  id="CryptoJS-script"
+  src="{{ $cryptoJS.RelPermalink }}"
+  integrity="{{ $cryptoJS.Data.Integrity }}"
+></script>
+
 <link rel="manifest" href="/site.webmanifest" />
 {{- /* Head custom content area end */ -}}

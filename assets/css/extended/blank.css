@@ -291,3 +291,44 @@ code {
 .spoiler:hover {
   background: unset;
 }
+
+.decrypt-passphrase {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: var(--primary);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--primary);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: var(--primary);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--primary);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--primary);
+  border-radius: 5px;
+}
+
+.decrypt-button {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: var(--theme);
+  background: var(--primary);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: var(--primary);
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: var(--primary);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--primary);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--primary);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-radius: 5px;
+}

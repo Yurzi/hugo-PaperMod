@@ -1,3 +1,22 @@
 {{- /* Footer custom content area start */ -}}
 {{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
 {{- /* Footer custom content area end */ -}}
+<script>
+function decrypt_encryped_content(button) {
+  const block = button.closest('.encrypted-block');
+  const encrypted_data = block.dataset.encryptedData;
+  const passphrase = block.querySelector('.decrypt-passphrase').value.trim();
+
+  try {
+    const bytes = CryptoJS.AES.decrypt(encrypted_data, passphrase);
+    const decrypted_content = bytes.toString(CryptoJS.enc.Utf8);
+
+    if(decrypted_content) {
+      block.innerHTML = decrypted_content;
+    }
+
+  } catch (err) {
+    alert('Error decrypting content: ' + err.message);
+  }
+}
+</script>

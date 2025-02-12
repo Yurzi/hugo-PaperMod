@@ -1,0 +1,14 @@
+{{ $passphrase := "" }}
+{{- if .IsNamedParams }}
+{{ $passphrase = (.Get "passphrase") | default "" }}
+{{- else}}
+{{ $passphrase = (.Get 0) | default ""}}
+{{- end}}
+{{- with .Inner }}
+<div class="encrypted-block" data-unencrypted-content="{{ . | markdownify }}" data-passphrase="{{ $passphrase }}">
+  <div class="decrypt-pad">
+    <input type="password" class="decrypt-passphrase" placeholder="{{i18n "input_passphrase"}}"/>
+    <button class="decrypt-button" onclick="decrypt_encryped_content(this)">{{i18n "decrypt"}}</button>
+  </div>
+</div>
+{{- end }}
