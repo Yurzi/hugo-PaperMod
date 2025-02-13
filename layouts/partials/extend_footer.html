@@ -10,9 +10,10 @@ function decrypt_encryped_content(button) {
   try {
     const bytes = CryptoJS.AES.decrypt(encrypted_data, passphrase);
     const decrypted_content = bytes.toString(CryptoJS.enc.Utf8);
+    const html_doc = window.atob(decrypted_content);
 
     if(decrypted_content) {
-      block.innerHTML = decrypted_content;
+      block.innerHTML = html_doc;
     }
 
   } catch (err) {
