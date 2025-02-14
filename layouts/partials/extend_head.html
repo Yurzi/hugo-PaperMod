@@ -49,7 +49,7 @@
   ></script>
 {{- end }}
 
-{{- $cryptoJS := resources.Get "js/crypto-js.js" -}}
+{{- $cryptoJS := resources.Get "js/crypto-js.min.js" -}}
 {{ $cryptoJS = $cryptoJS | fingerprint }}
 <script
   defer
