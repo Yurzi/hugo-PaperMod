@@ -10,6 +10,9 @@
       {{ $texChtml = . }}
     {{ end }}
   {{- end }}
+  {{ with resources.Copy "mathjax/tex-mml-chtml.min.js" $texChtml }}
+    {{ $texChtml = . }}
+  {{ end }}
   {{- $mathjax := $texChtml | fingerprint -}}
   <script
     defer
@@ -37,7 +40,9 @@
     {{ with .Err }}
       {{ errorf "%s" . }}
     {{ else with .Value }}
-      {{ $mermaid = . }}
+      {{ with resources.Copy "js/mermaid.min.js" . }}
+        {{ $mermaid = . }}
+      {{ end }}
     {{ end }}
   {{- end }}
   {{ $mermaid = $mermaid | fingerprint }}
@@ -55,7 +60,9 @@
     {{ with .Err }}
       {{ errorf "%s" . }}
     {{ else with .Value }}
-      {{ $cryptoJS = . }}
+      {{ with resources.Copy "js/crypto-js.min.js" . }}
+        {{ $cryptoJS = . }}
+      {{ end }}
     {{ end }}
   {{- end }}
 {{ $cryptoJS = $cryptoJS | fingerprint }}
