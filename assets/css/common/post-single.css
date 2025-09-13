@@ -15,11 +15,14 @@
 
 .post-meta,
 .breadcrumbs {
-  color: var(--secondary);
-  font-size: 14px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .post-meta .i18n_list li {
@@ -127,11 +130,7 @@
 
 .post-content dd~dd,
 .post-content dt~dt {
-<<<<<<< HEAD
   margin-top: 10px;
-=======
-    margin-top: 10px;
->>>>>>> 5a46517 (Fix breadcumb alignment in post-single)
 }
 
 .post-content table {
@@ -166,11 +165,7 @@
 }
 
 .post-content li>.highlight {
-<<<<<<< HEAD
   margin-inline-end: 0;
-=======
-    margin-inline-end: 0;
->>>>>>> 5a46517 (Fix breadcumb alignment in post-single)
 }
 
 .post-content ul pre {
@@ -249,7 +244,6 @@
 }
 
 .post-content figure>figcaption {
-<<<<<<< HEAD
   color: var(--primary);
   font-size: 16px;
   font-weight: bold;
@@ -260,18 +254,6 @@
   color: var(--secondary);
   font-size: 14px;
   font-weight: normal;
-=======
-    color: var(--primary);
-    font-size: 16px;
-    font-weight: bold;
-    margin: 8px 0 16px;
-}
-
-.post-content figure>figcaption>p {
-    color: var(--secondary);
-    font-size: 14px;
-    font-weight: normal;
->>>>>>> 5a46517 (Fix breadcumb alignment in post-single)
 }
 
 .toc {
