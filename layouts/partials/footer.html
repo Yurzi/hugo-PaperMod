@@ -57,12 +57,17 @@
 
 
 <script>
-  let menu = document.getElementById("menu");
+  let menu = document.getElementById('menu');
   if (menu) {
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-      localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-    };
+      // Set the scroll position
+      const scrollPosition = localStorage.getItem("menu-scroll-position");
+      if (scrollPosition) {
+          menu.scrollLeft = parseInt(scrollPosition, 10);
+      }
+      
+      menu.onscroll = function () {
+          localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+      }
   }
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
