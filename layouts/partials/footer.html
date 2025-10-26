@@ -103,15 +103,17 @@
 {{- if (not site.Params.disableThemeToggle) }}
   <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-      if (document.body.className.includes("dark")) {
-        document.body.classList.remove("dark");
-        localStorage.setItem("pref-theme", "light");
-      } else {
-        document.body.classList.add("dark");
-        localStorage.setItem("pref-theme", "dark");
-      }
-    });
-  </script>
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
 {{- end }}
 
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (.Param "ShowCodeCopyButtons")) }}
