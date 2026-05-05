@@ -253,7 +253,8 @@ code {
   color: var(--content);
 }
 
-.toc {
+/* ---- TOC base styles (higher specificity than core post-single.css) ---- */
+details.toc {
   margin: 0 2px 40px 2px;
   border: 1px solid var(--border);
   background: var(--entry);
@@ -261,49 +262,17 @@ code {
   padding: 0.4em;
 }
 
-.toc-container.wide {
-  position: absolute;
-  height: 100%;
-  border-right: 1px solid var(--border);
-  left: calc((var(--toc-width) + var(--gap)) * -1);
-  top: calc(var(--gap) * 2);
-  width: var(--toc-width);
-}
-
-.wide .toc {
-  position: sticky;
-  top: var(--gap);
-  border: unset;
-  background: unset;
-  border-radius: unset;
-  width: 100%;
-  margin: 0 2px 40px 2px;
-}
-
-.toc details summary {
-  cursor: zoom-in;
+details.toc summary {
+  cursor: pointer;
   margin-inline-start: 20px;
   padding: 12px 0;
 }
 
-.toc details[open] summary {
+details.toc[open] summary {
   font-weight: 500;
 }
 
-.toc-container.wide .toc .inner {
-  margin: 0;
-}
-
-.active {
-  font-size: 110%;
-  font-weight: 600;
-}
-
-.toc ul {
-  list-style-type: circle;
-}
-
-.toc .inner {
+details.toc .inner {
   margin: 0 0 0 20px;
   padding: 0px 15px 15px 20px;
   font-size: 16px;
@@ -311,25 +280,73 @@ code {
   overflow-y: auto;
 }
 
-.toc .inner::-webkit-scrollbar-thumb {
+details.toc .inner::-webkit-scrollbar-thumb {
   background: var(--border);
   border: 7px solid var(--theme);
   border-radius: var(--radius);
 }
 
-.toc li ul {
+details.toc ul {
+  list-style-type: circle;
+}
+
+details.toc li ul {
   margin-inline-start: calc(var(--gap) * 0.5);
   list-style-type: none;
 }
 
-.toc li {
+details.toc li {
   list-style: none;
   font-size: 0.95rem;
   padding-bottom: 5px;
 }
 
-.toc li a:hover {
+details.toc li a:hover {
   color: var(--secondary);
+}
+
+/* ---- TOC Wide / Left Side Layout (desktop) ---- */
+@media screen and (min-width: 1100px) {
+  .toc-container.wide {
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid var(--border);
+    left: calc((var(--toc-width) + var(--gap)) * -1);
+    top: calc(var(--gap) * 2);
+    width: var(--toc-width);
+  }
+
+  .toc-container.wide details.toc {
+    position: sticky;
+    top: var(--gap);
+    border: unset;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc-container.wide details.toc .inner {
+    margin: 0;
+    padding: 0 15px 15px 20px;
+  }
+}
+
+/* Narrow screens: side TOC falls back to inline flow */
+@media screen and (max-width: 1099px) {
+  .toc-container.wide {
+    position: static;
+    height: auto;
+    border-right: none;
+    width: auto;
+    margin-bottom: var(--content-gap);
+  }
+}
+
+.active {
+  font-size: 110%;
+  font-weight: 600;
 }
 
 .terms-tags {
