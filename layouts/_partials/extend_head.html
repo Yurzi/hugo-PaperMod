@@ -1,6 +1,58 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+{{- if .Param "math" }}
+  {{- $texChtml := resources.Get "js/tex-mml-chtml.js" -}}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.min.js") }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else with .Value }}
+      {{ $texChtml = . }}
+    {{ end }}
+  {{- end }}
+  {{ with resources.Copy "mathjax/tex-mml-chtml.min.js" $texChtml }}
+    {{ $texChtml = . }}
+  {{ end }}
+  {{- $mathjax := $texChtml | fingerprint -}}
+  <script
+    defer
+    crossorigin="anonymous"
+    id="MathJax-script"
+    src="{{ $mathjax.RelPermalink }}"
+    integrity="{{ $mathjax.Data.Integrity }}"
+  ></script>
+  <script>
+    MathJax = {
+      tex: {
+        displayMath: [
+          ["\\[", "\\]"],
+          ["$$", "$$"],
+        ],
+        inlineMath: [["\\(", "\\)"], ["$", "$"]],
+      },
+    };
+  </script>
+{{- end }}
+{{- if .Param "mermaid" }}
+  {{- $mermaid := resources.Get "js/mermaid.min.js" -}}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js") }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else with .Value }}
+      {{ with resources.Copy "js/mermaid.min.js" . }}
+        {{ $mermaid = . }}
+      {{ end }}
+    {{ end }}
+  {{- end }}
+  {{ $mermaid = $mermaid | fingerprint }}
+  <script
+    defer
+    crossorigin="anonymous"
+    id="Mermaid-script"
+    src="{{ $mermaid.RelPermalink }}"
+    integrity="{{ $mermaid.Data.Integrity }}"
+  ></script>
+{{- end }}
 {{- $cryptoJS := resources.Get "js/crypto-js.min.js" -}}
   {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.js") }}
     {{ with .Err }}
