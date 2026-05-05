@@ -15,8 +15,16 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 :root[data-theme="dark"] {
   --box-shodow: rgb(24, 24, 37);
-  --code-bg-secondary: rgb(54, 58, 79);
+  --code-bg-secondary: rgb(46, 46, 51);
   --spoiler-bg: rgb(24, 24, 37);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --box-shodow: rgb(24, 24, 37);
+    --code-bg-secondary: rgb(46, 46, 51);
+    --spoiler-bg: rgb(24, 24, 37);
+  }
 }
 
 body {
