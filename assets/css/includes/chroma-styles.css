@@ -1,86 +1,175 @@
-/* Background */ .bg { color: #cad3f5; background-color: #24273a; }
-/* PreWrapper */ .chroma { color: #cad3f5; background-color: #24273a; }
-/* Other */ .chroma .x {  }
-/* Error */ .chroma .err { color: #ed8796 }
-/* CodeLine */ .chroma .cl {  }
-/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
-/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
-/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
-/* LineHighlight */ .chroma .hl { background-color: #474733 }
-/* LineNumbersTable */ .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #8087a2 }
-/* LineNumbers */ .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #8087a2 }
-/* Line */ .chroma .line { display: flex; }
-/* Keyword */ .chroma .k { color: #c6a0f6 }
-/* KeywordConstant */ .chroma .kc { color: #f5a97f }
-/* KeywordDeclaration */ .chroma .kd { color: #ed8796 }
-/* KeywordNamespace */ .chroma .kn { color: #8bd5ca }
-/* KeywordPseudo */ .chroma .kp { color: #c6a0f6 }
-/* KeywordReserved */ .chroma .kr { color: #c6a0f6 }
-/* KeywordType */ .chroma .kt { color: #ed8796 }
-/* Name */ .chroma .n {  }
-/* NameAttribute */ .chroma .na { color: #8aadf4 }
-/* NameBuiltin */ .chroma .nb { color: #91d7e3 }
-/* NameBuiltinPseudo */ .chroma .bp { color: #91d7e3 }
-/* NameClass */ .chroma .nc { color: #eed49f }
-/* NameConstant */ .chroma .no { color: #eed49f }
-/* NameDecorator */ .chroma .nd { color: #8aadf4; font-weight: bold }
-/* NameEntity */ .chroma .ni { color: #8bd5ca }
-/* NameException */ .chroma .ne { color: #f5a97f }
-/* NameFunction */ .chroma .nf { color: #8aadf4 }
-/* NameFunctionMagic */ .chroma .fm { color: #8aadf4 }
-/* NameLabel */ .chroma .nl { color: #91d7e3 }
-/* NameNamespace */ .chroma .nn { color: #f5a97f }
-/* NameOther */ .chroma .nx {  }
-/* NameProperty */ .chroma .py { color: #f5a97f }
-/* NameTag */ .chroma .nt { color: #c6a0f6 }
-/* NameVariable */ .chroma .nv { color: #f4dbd6 }
-/* NameVariableClass */ .chroma .vc { color: #f4dbd6 }
-/* NameVariableGlobal */ .chroma .vg { color: #f4dbd6 }
-/* NameVariableInstance */ .chroma .vi { color: #f4dbd6 }
-/* NameVariableMagic */ .chroma .vm { color: #f4dbd6 }
-/* Literal */ .chroma .l {  }
-/* LiteralDate */ .chroma .ld {  }
-/* LiteralString */ .chroma .s { color: #a6da95 }
-/* LiteralStringAffix */ .chroma .sa { color: #ed8796 }
-/* LiteralStringBacktick */ .chroma .sb { color: #a6da95 }
-/* LiteralStringChar */ .chroma .sc { color: #a6da95 }
-/* LiteralStringDelimiter */ .chroma .dl { color: #8aadf4 }
-/* LiteralStringDoc */ .chroma .sd { color: #6e738d }
-/* LiteralStringDouble */ .chroma .s2 { color: #a6da95 }
-/* LiteralStringEscape */ .chroma .se { color: #8aadf4 }
-/* LiteralStringHeredoc */ .chroma .sh { color: #6e738d }
-/* LiteralStringInterpol */ .chroma .si { color: #a6da95 }
-/* LiteralStringOther */ .chroma .sx { color: #a6da95 }
-/* LiteralStringRegex */ .chroma .sr { color: #8bd5ca }
-/* LiteralStringSingle */ .chroma .s1 { color: #a6da95 }
-/* LiteralStringSymbol */ .chroma .ss { color: #a6da95 }
-/* LiteralNumber */ .chroma .m { color: #f5a97f }
-/* LiteralNumberBin */ .chroma .mb { color: #f5a97f }
-/* LiteralNumberFloat */ .chroma .mf { color: #f5a97f }
-/* LiteralNumberHex */ .chroma .mh { color: #f5a97f }
-/* LiteralNumberInteger */ .chroma .mi { color: #f5a97f }
-/* LiteralNumberIntegerLong */ .chroma .il { color: #f5a97f }
-/* LiteralNumberOct */ .chroma .mo { color: #f5a97f }
-/* Operator */ .chroma .o { color: #91d7e3; font-weight: bold }
-/* OperatorWord */ .chroma .ow { color: #91d7e3; font-weight: bold }
-/* Punctuation */ .chroma .p {  }
-/* Comment */ .chroma .c { color: #6e738d; font-style: italic }
-/* CommentHashbang */ .chroma .ch { color: #6e738d; font-style: italic }
-/* CommentMultiline */ .chroma .cm { color: #6e738d; font-style: italic }
-/* CommentSingle */ .chroma .c1 { color: #6e738d; font-style: italic }
-/* CommentSpecial */ .chroma .cs { color: #6e738d; font-style: italic }
-/* CommentPreproc */ .chroma .cp { color: #6e738d; font-style: italic }
-/* CommentPreprocFile */ .chroma .cpf { color: #6e738d; font-weight: bold; font-style: italic }
-/* Generic */ .chroma .g {  }
-/* GenericDeleted */ .chroma .gd { color: #ed8796; background-color: #363a4f }
-/* GenericEmph */ .chroma .ge { font-style: italic }
-/* GenericError */ .chroma .gr { color: #ed8796 }
-/* GenericHeading */ .chroma .gh { color: #f5a97f; font-weight: bold }
-/* GenericInserted */ .chroma .gi { color: #a6da95; background-color: #363a4f }
-/* GenericOutput */ .chroma .go {  }
-/* GenericPrompt */ .chroma .gp {  }
-/* GenericStrong */ .chroma .gs { font-weight: bold }
-/* GenericSubheading */ .chroma .gu { color: #f5a97f; font-weight: bold }
-/* GenericTraceback */ .chroma .gt { color: #ed8796 }
-/* GenericUnderline */ .chroma .gl { text-decoration: underline }
-/* TextWhitespace */ .chroma .w {  }
+/* Catppuccin Latte (Light) */
+:root:not([data-theme="dark"]) .chroma { color: var(--code-text); background-color: var(--code-block-bg); }
+:root:not([data-theme="dark"]) .bg { color: var(--code-text); background-color: var(--code-block-bg); }
+:root:not([data-theme="dark"]) .chroma .x {  }
+:root:not([data-theme="dark"]) .chroma .err { color: rgb(210, 15, 57) }
+:root:not([data-theme="dark"]) .chroma .cl {  }
+:root:not([data-theme="dark"]) .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+:root:not([data-theme="dark"]) .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+:root:not([data-theme="dark"]) .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+:root:not([data-theme="dark"]) .chroma .hl { background-color: rgb(230, 233, 239) }
+:root:not([data-theme="dark"]) .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: rgb(156, 160, 176) }
+:root:not([data-theme="dark"]) .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: rgb(156, 160, 176) }
+:root:not([data-theme="dark"]) .chroma .line { display: flex; }
+:root:not([data-theme="dark"]) .chroma .k { color: rgb(136, 57, 239) }
+:root:not([data-theme="dark"]) .chroma .kc { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .kd { color: rgb(210, 15, 57) }
+:root:not([data-theme="dark"]) .chroma .kn { color: rgb(23, 146, 153) }
+:root:not([data-theme="dark"]) .chroma .kp { color: rgb(136, 57, 239) }
+:root:not([data-theme="dark"]) .chroma .kr { color: rgb(136, 57, 239) }
+:root:not([data-theme="dark"]) .chroma .kt { color: rgb(210, 15, 57) }
+:root:not([data-theme="dark"]) .chroma .n {  }
+:root:not([data-theme="dark"]) .chroma .na { color: rgb(30, 102, 245) }
+:root:not([data-theme="dark"]) .chroma .nb { color: rgb(4, 165, 229) }
+:root:not([data-theme="dark"]) .chroma .bp { color: rgb(4, 165, 229) }
+:root:not([data-theme="dark"]) .chroma .nc { color: rgb(223, 142, 29) }
+:root:not([data-theme="dark"]) .chroma .no { color: rgb(223, 142, 29) }
+:root:not([data-theme="dark"]) .chroma .nd { color: rgb(30, 102, 245); font-weight: bold }
+:root:not([data-theme="dark"]) .chroma .ni { color: rgb(23, 146, 153) }
+:root:not([data-theme="dark"]) .chroma .ne { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .nf { color: rgb(30, 102, 245) }
+:root:not([data-theme="dark"]) .chroma .fm { color: rgb(30, 102, 245) }
+:root:not([data-theme="dark"]) .chroma .nl { color: rgb(4, 165, 229) }
+:root:not([data-theme="dark"]) .chroma .nn { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .nx {  }
+:root:not([data-theme="dark"]) .chroma .py { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .nt { color: rgb(136, 57, 239) }
+:root:not([data-theme="dark"]) .chroma .nv { color: rgb(220, 138, 120) }
+:root:not([data-theme="dark"]) .chroma .vc { color: rgb(220, 138, 120) }
+:root:not([data-theme="dark"]) .chroma .vg { color: rgb(220, 138, 120) }
+:root:not([data-theme="dark"]) .chroma .vi { color: rgb(220, 138, 120) }
+:root:not([data-theme="dark"]) .chroma .vm { color: rgb(220, 138, 120) }
+:root:not([data-theme="dark"]) .chroma .l {  }
+:root:not([data-theme="dark"]) .chroma .ld {  }
+:root:not([data-theme="dark"]) .chroma .s { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .sa { color: rgb(210, 15, 57) }
+:root:not([data-theme="dark"]) .chroma .sb { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .sc { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .dl { color: rgb(30, 102, 245) }
+:root:not([data-theme="dark"]) .chroma .sd { color: rgb(140, 143, 161) }
+:root:not([data-theme="dark"]) .chroma .s2 { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .se { color: rgb(30, 102, 245) }
+:root:not([data-theme="dark"]) .chroma .sh { color: rgb(140, 143, 161) }
+:root:not([data-theme="dark"]) .chroma .si { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .sx { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .sr { color: rgb(23, 146, 153) }
+:root:not([data-theme="dark"]) .chroma .s1 { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .ss { color: rgb(64, 160, 43) }
+:root:not([data-theme="dark"]) .chroma .m { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .mb { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .mf { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .mh { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .mi { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .il { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .mo { color: rgb(254, 100, 11) }
+:root:not([data-theme="dark"]) .chroma .o { color: rgb(4, 165, 229); font-weight: bold }
+:root:not([data-theme="dark"]) .chroma .ow { color: rgb(4, 165, 229); font-weight: bold }
+:root:not([data-theme="dark"]) .chroma .p {  }
+:root:not([data-theme="dark"]) .chroma .c { color: rgb(140, 143, 161); font-style: italic }
+:root:not([data-theme="dark"]) .chroma .ch { color: rgb(140, 143, 161); font-style: italic }
+:root:not([data-theme="dark"]) .chroma .cm { color: rgb(140, 143, 161); font-style: italic }
+:root:not([data-theme="dark"]) .chroma .c1 { color: rgb(140, 143, 161); font-style: italic }
+:root:not([data-theme="dark"]) .chroma .cs { color: rgb(140, 143, 161); font-style: italic }
+:root:not([data-theme="dark"]) .chroma .cp { color: rgb(140, 143, 161); font-style: italic }
+:root:not([data-theme="dark"]) .chroma .cpf { color: rgb(140, 143, 161); font-weight: bold; font-style: italic }
+:root:not([data-theme="dark"]) .chroma .g {  }
+:root:not([data-theme="dark"]) .chroma .gd { color: rgb(210, 15, 57); background-color: rgb(204, 208, 218) }
+:root:not([data-theme="dark"]) .chroma .ge { font-style: italic }
+:root:not([data-theme="dark"]) .chroma .gr { color: rgb(210, 15, 57) }
+:root:not([data-theme="dark"]) .chroma .gh { color: rgb(254, 100, 11); font-weight: bold }
+:root:not([data-theme="dark"]) .chroma .gi { color: rgb(64, 160, 43); background-color: rgb(204, 208, 218) }
+:root:not([data-theme="dark"]) .chroma .go {  }
+:root:not([data-theme="dark"]) .chroma .gp {  }
+:root:not([data-theme="dark"]) .chroma .gs { font-weight: bold }
+:root:not([data-theme="dark"]) .chroma .gu { color: rgb(254, 100, 11); font-weight: bold }
+:root:not([data-theme="dark"]) .chroma .gt { color: rgb(210, 15, 57) }
+:root:not([data-theme="dark"]) .chroma .gl { text-decoration: underline }
+:root:not([data-theme="dark"]) .chroma .w {  }
+
+/* Catppuccin Mocha (Dark) */
+:root[data-theme="dark"] .chroma { color: var(--code-text); background-color: var(--code-block-bg); }
+:root[data-theme="dark"] .bg { color: var(--code-text); background-color: var(--code-block-bg); }
+:root[data-theme="dark"] .chroma .x {  }
+:root[data-theme="dark"] .chroma .err { color: rgb(237, 135, 150) }
+:root[data-theme="dark"] .chroma .cl {  }
+:root[data-theme="dark"] .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+:root[data-theme="dark"] .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+:root[data-theme="dark"] .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+:root[data-theme="dark"] .chroma .hl { background-color: rgb(71, 71, 51) }
+:root[data-theme="dark"] .chroma .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: rgb(128, 135, 162) }
+:root[data-theme="dark"] .chroma .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: rgb(128, 135, 162) }
+:root[data-theme="dark"] .chroma .line { display: flex; }
+:root[data-theme="dark"] .chroma .k { color: rgb(198, 160, 246) }
+:root[data-theme="dark"] .chroma .kc { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .kd { color: rgb(237, 135, 150) }
+:root[data-theme="dark"] .chroma .kn { color: rgb(139, 213, 202) }
+:root[data-theme="dark"] .chroma .kp { color: rgb(198, 160, 246) }
+:root[data-theme="dark"] .chroma .kr { color: rgb(198, 160, 246) }
+:root[data-theme="dark"] .chroma .kt { color: rgb(237, 135, 150) }
+:root[data-theme="dark"] .chroma .n {  }
+:root[data-theme="dark"] .chroma .na { color: rgb(138, 173, 244) }
+:root[data-theme="dark"] .chroma .nb { color: rgb(145, 215, 227) }
+:root[data-theme="dark"] .chroma .bp { color: rgb(145, 215, 227) }
+:root[data-theme="dark"] .chroma .nc { color: rgb(238, 212, 159) }
+:root[data-theme="dark"] .chroma .no { color: rgb(238, 212, 159) }
+:root[data-theme="dark"] .chroma .nd { color: rgb(138, 173, 244); font-weight: bold }
+:root[data-theme="dark"] .chroma .ni { color: rgb(139, 213, 202) }
+:root[data-theme="dark"] .chroma .ne { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .nf { color: rgb(138, 173, 244) }
+:root[data-theme="dark"] .chroma .fm { color: rgb(138, 173, 244) }
+:root[data-theme="dark"] .chroma .nl { color: rgb(145, 215, 227) }
+:root[data-theme="dark"] .chroma .nn { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .nx {  }
+:root[data-theme="dark"] .chroma .py { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .nt { color: rgb(198, 160, 246) }
+:root[data-theme="dark"] .chroma .nv { color: rgb(244, 219, 214) }
+:root[data-theme="dark"] .chroma .vc { color: rgb(244, 219, 214) }
+:root[data-theme="dark"] .chroma .vg { color: rgb(244, 219, 214) }
+:root[data-theme="dark"] .chroma .vi { color: rgb(244, 219, 214) }
+:root[data-theme="dark"] .chroma .vm { color: rgb(244, 219, 214) }
+:root[data-theme="dark"] .chroma .l {  }
+:root[data-theme="dark"] .chroma .ld {  }
+:root[data-theme="dark"] .chroma .s { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .sa { color: rgb(237, 135, 150) }
+:root[data-theme="dark"] .chroma .sb { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .sc { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .dl { color: rgb(138, 173, 244) }
+:root[data-theme="dark"] .chroma .sd { color: rgb(110, 115, 141) }
+:root[data-theme="dark"] .chroma .s2 { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .se { color: rgb(138, 173, 244) }
+:root[data-theme="dark"] .chroma .sh { color: rgb(110, 115, 141) }
+:root[data-theme="dark"] .chroma .si { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .sx { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .sr { color: rgb(139, 213, 202) }
+:root[data-theme="dark"] .chroma .s1 { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .ss { color: rgb(166, 218, 149) }
+:root[data-theme="dark"] .chroma .m { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .mb { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .mf { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .mh { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .mi { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .il { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .mo { color: rgb(245, 169, 127) }
+:root[data-theme="dark"] .chroma .o { color: rgb(145, 215, 227); font-weight: bold }
+:root[data-theme="dark"] .chroma .ow { color: rgb(145, 215, 227); font-weight: bold }
+:root[data-theme="dark"] .chroma .p {  }
+:root[data-theme="dark"] .chroma .c { color: rgb(110, 115, 141); font-style: italic }
+:root[data-theme="dark"] .chroma .ch { color: rgb(110, 115, 141); font-style: italic }
+:root[data-theme="dark"] .chroma .cm { color: rgb(110, 115, 141); font-style: italic }
+:root[data-theme="dark"] .chroma .c1 { color: rgb(110, 115, 141); font-style: italic }
+:root[data-theme="dark"] .chroma .cs { color: rgb(110, 115, 141); font-style: italic }
+:root[data-theme="dark"] .chroma .cp { color: rgb(110, 115, 141); font-style: italic }
+:root[data-theme="dark"] .chroma .cpf { color: rgb(110, 115, 141); font-weight: bold; font-style: italic }
+:root[data-theme="dark"] .chroma .g {  }
+:root[data-theme="dark"] .chroma .gd { color: rgb(237, 135, 150); background-color: rgb(54, 58, 79) }
+:root[data-theme="dark"] .chroma .ge { font-style: italic }
+:root[data-theme="dark"] .chroma .gr { color: rgb(237, 135, 150) }
+:root[data-theme="dark"] .chroma .gh { color: rgb(245, 169, 127); font-weight: bold }
+:root[data-theme="dark"] .chroma .gi { color: rgb(166, 218, 149); background-color: rgb(54, 58, 79) }
+:root[data-theme="dark"] .chroma .go {  }
+:root[data-theme="dark"] .chroma .gp {  }
+:root[data-theme="dark"] .chroma .gs { font-weight: bold }
+:root[data-theme="dark"] .chroma .gu { color: rgb(245, 169, 127); font-weight: bold }
+:root[data-theme="dark"] .chroma .gt { color: rgb(237, 135, 150) }
+:root[data-theme="dark"] .chroma .gl { text-decoration: underline }
+:root[data-theme="dark"] .chroma .w {  }
