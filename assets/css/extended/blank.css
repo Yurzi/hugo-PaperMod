@@ -32,43 +32,68 @@ code {
   background: var(--code-bg);
 }
 
+.decrypt-pad {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.decrypt-pad svg {
+  color: var(--secondary);
+  width: 18px;
+  height: 18px;
+}
+
 .decrypt-passphrase {
-  padding-left: 8px;
-  padding-right: 6px;
+  max-width: 240px;
+  padding: 6px 12px;
   color: var(--primary);
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: var(--primary);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: var(--primary);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--primary);
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: var(--primary);
-  border-radius: 5px;
+  background: var(--theme);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.decrypt-passphrase:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
 }
 
 .decrypt-button {
-  padding-left: 8px;
-  padding-right: 6px;
+  padding: 6px 16px;
   color: var(--theme);
   background: var(--primary);
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: var(--primary);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: var(--primary);
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--primary);
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: var(--primary);
-  border-radius: 5px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.decrypt-button:hover {
+  opacity: 0.85;
+}
+
+.decrypt-button:active {
+  transform: translateY(1px);
+}
+
+@media screen and (max-width: 600px) {
+  .decrypt-pad {
+    flex-wrap: wrap;
+  }
+  .decrypt-passphrase {
+    flex: 1;
+    min-width: 150px;
+  }
 }
 
 .friend-wrapper {
