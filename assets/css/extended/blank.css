@@ -8,13 +8,15 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
   --nav-width: 1380px;
   --article-width: 650px;
   --toc-width: 300px;
-  --box-shodow: #DBDBDB;
-  --code-bg-secondary: rgb(251, 251, 251);
+  --box-shodow: rgb(204, 208, 218);
+  --code-bg-secondary: rgb(204, 208, 218);
+  --spoiler-bg: rgb(204, 208, 218);
 }
 
-.dark {
-  --box-shodow: #F7F7F7;
-  --code-bg-secondary: rgb(65, 66, 72);
+:root[data-theme="dark"] {
+  --box-shodow: rgb(24, 24, 37);
+  --code-bg-secondary: rgb(54, 58, 79);
+  --spoiler-bg: rgb(24, 24, 37);
 }
 
 body {
@@ -209,11 +211,13 @@ code {
 .spoiler {
   margin: auto 4px auto 4px;
   border-radius: 5px;
-  background: var(--content);
+  background: var(--spoiler-bg);
+  color: var(--spoiler-bg);
 }
 
 .spoiler:hover {
   background: unset;
+  color: var(--content);
 }
 
 .toc {
@@ -309,11 +313,11 @@ code {
   transition: transform 0.5s;
 }
 
-.dark .terms-tags a {
+:root[data-theme="dark"] .terms-tags a {
   background: none;
 }
 
-.dark .terms-tags a:hover {
+:root[data-theme="dark"] .terms-tags a:hover {
   background: none;
 }
 
