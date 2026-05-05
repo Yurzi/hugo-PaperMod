@@ -1,4 +1,22 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+{{- $cryptoJS := resources.Get "js/crypto-js.min.js" -}}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.js") }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else with .Value }}
+      {{ with resources.Copy "js/crypto-js.min.js" . }}
+        {{ $cryptoJS = . }}
+      {{ end }}
+    {{ end }}
+  {{- end }}
+{{ $cryptoJS = $cryptoJS | fingerprint }}
+<script
+  defer
+  crossorigin="anonymous"
+  id="CryptoJS-script"
+  src="{{ $cryptoJS.RelPermalink }}"
+  integrity="{{ $cryptoJS.Data.Integrity }}"
+></script>
 {{- /* Head custom content area end */ -}}

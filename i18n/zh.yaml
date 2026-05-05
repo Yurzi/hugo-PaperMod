@@ -31,3 +31,9 @@
 
 - id: code_copied
   translation: "已复制！"
+
+- id: input_passphrase
+  translation: "请输入密钥"
+
+- id: decrypt
+  translation: "解密"
