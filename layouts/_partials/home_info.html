@@ -7,6 +7,17 @@
         {{ $opts := dict "display" "block" }}
         {{ .Content | $.Page.RenderString $opts }}
     </div>
+    {{- with .Counter }}
+        {{- $id := (.Id | default site.Title) }}
+        {{- $id = strings.TrimPrefix "@" $id }}
+        {{- $theme := (.Theme | default "moebooru") }}
+        {{- $align := (.Align | default "center") }}
+        {{- if and $id (not (.Disable | default false)) }}
+    <div class="home-info-counter" style="align-items: center; display: flex; justify-content: {{ $align | safeCSS }}">
+        <img src="https://count.yurzi.net/@{{ $id | safeURL }}?theme={{ $theme | safeURL }}" alt="{{ $id | safeHTMLAttr }}-counter" />
+    </div>
+        {{- end }}
+    {{- end }}
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </footer>

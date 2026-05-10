@@ -2,16 +2,18 @@
   {{ $theme := (.Get "theme") | default "moebooru" | safeURL }}
   {{ $align := (.Get "align") | default "center" | safeCSS }}
   {{ with .Get "id" }}
+    {{ $id := strings.TrimPrefix "@" . }}
     <div style="align-items: center; display: flex; justify-content: {{ $align }}">
-      <img src="http://count.yurzi.net/{{ . | safeURL }}?theme={{ $theme }}" alt="{{ . | safeHTMLAttr }}-counter" />
+      <img src="https://count.yurzi.net/@{{ $id | safeURL }}?theme={{ $theme }}" alt="{{ $id | safeHTMLAttr }}-counter" />
     </div>
   {{ end }}
 {{- else }}
   {{ $theme := (.Get 1) | default "moebooru" | safeURL }}
   {{ $align := (.Get 2) | default "center" | safeCSS }}
   {{ with .Get 0 }}
+    {{ $id := strings.TrimPrefix "@" . }}
     <div style="align-items: center; display: flex; justify-content: {{ $align }}">
-      <img src="http://count.yurzi.net/{{ . | safeURL }}?theme={{ $theme }}" alt="{{ . | safeHTMLAttr }}-counter" />
+      <img src="https://count.yurzi.net/@{{ $id | safeURL }}?theme={{ $theme }}" alt="{{ $id | safeHTMLAttr }}-counter" />
     </div>
   {{ end }}
 {{- end }}
