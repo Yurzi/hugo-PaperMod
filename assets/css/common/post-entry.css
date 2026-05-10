@@ -39,6 +39,16 @@
     margin: 0;
 }
 
+.home-info-counter {
+    margin: 1rem 0 0.75rem;
+}
+
+.home-info-counter img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 .home-info .social-icons a:first-of-type {
     padding-inline-start: 0;
 }
