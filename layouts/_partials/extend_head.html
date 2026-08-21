@@ -3,9 +3,9 @@
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- if .Param "math" }}
   {{- $texChtml := resources.Get "js/tex-mml-chtml.js" -}}
-  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.min.js") }}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js") }}
     {{ with .Err }}
-      {{ errorf "%s" . }}
+      {{ warnf "%s; using bundled fallback" . }}
     {{ else with .Value }}
       {{ $texChtml = . }}
     {{ end }}
@@ -22,7 +22,16 @@
     integrity="{{ $mathjax.Data.Integrity }}"
   ></script>
   <script>
-    MathJax = {
+    window.MathJax = {
+      loader: {
+        paths: {
+          fonts: "/mathjax/fonts",
+        },
+      },
+      output: {
+        font: "mathjax-newcm",
+        fontPath: "[fonts]/%%FONT%%-font",
+      },
       tex: {
         displayMath: [
           ["\\[", "\\]"],
@@ -35,9 +44,9 @@
 {{- end }}
 {{- if .Param "mermaid" }}
   {{- $mermaid := resources.Get "js/mermaid.min.js" -}}
-  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js") }}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js") }}
     {{ with .Err }}
-      {{ errorf "%s" . }}
+      {{ warnf "%s; using bundled fallback" . }}
     {{ else with .Value }}
       {{ with resources.Copy "js/mermaid.min.js" . }}
         {{ $mermaid = . }}
@@ -54,9 +63,9 @@
   ></script>
 {{- end }}
 {{- $cryptoJS := resources.Get "js/crypto-js.min.js" -}}
-  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.js") }}
+  {{- with try (resources.GetRemote "https://cdn.jsdelivr.net/npm/crypto-js@4/crypto-js.min.js") }}
     {{ with .Err }}
-      {{ errorf "%s" . }}
+      {{ warnf "%s; using bundled fallback" . }}
     {{ else with .Value }}
       {{ with resources.Copy "js/crypto-js.min.js" . }}
         {{ $cryptoJS = . }}
